@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form name="login_form">
+        <h3>Login Here</h3>
+
+        <label for="username" name ="username">Username</label>
+        <input type="text" placeholder="username" id="username">
+        <div class="usernameError" id="usernameError"></div>
+
+        <label for="password" name=" password">Password</label>
+        <input type="password" placeholder="Password" id="password">
+        <div id="passwordError" class="passwordError"></div>
+
+        <button type ="submit" onclick="validateForm()">Log In</button>
+        <div class="social">
+            <div class="go"><i class="fab fa-google"></i><a href="https://www.google.com/">Google</a></div>
+            <div class="fb"><i class="fab fa-facebook"></i><a href="https://www.facebook.com/">Facebook</a></div>
+        </div>
+        <div class="reg">
+            <a href="register.html" id="register">Register Here</a>
+        </div>
+        
+        
+    </form>
+<script src="portofolio.js"></script>
+    
+</body>
+</html>

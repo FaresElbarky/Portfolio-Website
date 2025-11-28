@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, violet, #2b2b2b);
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h3 {
+    text-align: center;
+    color: #2b2b2b;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+}
+
+.shape {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #2b2b2b;
+    border-radius: 50%;
+    animation: moveShapes 5s ease-in-out infinite;
+    
+}
+
+.shape:nth-child(1) {
+    top: 50%;
+    left: 20%;
+    animation-duration: 7s;
+}
+
+.shape:nth-child(2) {
+    top: 20%;
+    left: 65%;
+    animation-duration: 5s;
+}
+
+@keyframes moveShapes {
+    0% {
+        transform: translate(20, 20);
+        background-color: #2b2b2b;
+    }
+    50% {
+        transform: translate(50px, 50px);
+        background-color: violet;
+    }
+    100% {
+        transform: translate(0,90);
+        background-color: #2b2b2b;
+    }
+    
+}
+
+form {
+    background: #2b2b2b;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    
+}
+form h3{
+    color: violet;
+}
+
+label {
+    font-weight: 500;
+    color: violet;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    outline: none;
+    border-color: violet;
+    background-color: #fff;
+}
+
+.error {
+    color: #ffb3b3;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: block;
+    min-height: 18px;
+}
+
+input.invalid {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 3px rgba(255,107,107,0.08);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: gray;
+    border: none;
+    border-radius: 8px;
+    color: #2b2b2b;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: violet;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.social div {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.social div:hover {
+    background-color: violet;
+}
+
+.social .go i,
+.social .fb i {
+    margin-right: 10px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.social .go {
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+.social .fb {
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+.reg {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reg a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 600;
+}
+
+.reg a:hover {
+    color: violet;
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+}
